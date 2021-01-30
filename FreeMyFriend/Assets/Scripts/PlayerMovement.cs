@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Transform theTransfomr;
+    public Vector2 Hrange = Vector2.zero;
+    public Vector2 Vrange = Vector2.zero;
    
     public float moveSpeed = 100f;
 
@@ -16,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         stopPlayer = false;
+        theTransfomr = GetComponent<Transform> ();
     
     }
 
@@ -26,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
           
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        theTransfomr.position = new Vector3(
+
+            Mathf.Clamp(transform.position.x,Vrange.x,Vrange.y),
+            Mathf.Clamp(transform.position.y,Hrange.x,Hrange.y),
+            transform.position.z
+
+        );
 
          
     }
