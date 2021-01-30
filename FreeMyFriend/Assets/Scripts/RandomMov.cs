@@ -65,7 +65,7 @@ public class RandomMov : MonoBehaviour
             }
         }
         //GetComponent<Rigidbody2D>().velocity = transform.up * 1;
-        rb.MovePosition(rb.position + movement * 2 * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * 3 * Time.fixedDeltaTime);
         animator.SetFloat("speed", 1f);
 
     }
