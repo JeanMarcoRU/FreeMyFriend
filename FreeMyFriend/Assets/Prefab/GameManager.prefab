@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2812456922060166165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2812456922060166167}
+  - component: {fileID: 2812456922060166166}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2812456922060166167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812456922060166165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.312013, y: -30.696432, z: -3.578125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2812456922060166166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812456922060166165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f86a53eb7e671d45b2f3f00354a5d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcs:
+  - {fileID: 5179516152624807307, guid: 7068d4c32ec1e3a42b8b6436ba5bec83, type: 3}
+  - {fileID: 5192232347414612072, guid: 38c8f9b7c1e2aa04ab846a1f1b59c459, type: 3}
+  - {fileID: 6802108477499908620, guid: 56094c6c94af67b4f80a79e29645b798, type: 3}
+  - {fileID: 1310463760795011623, guid: 8736b20488785ab4b9229a0b27c51acd, type: 3}
+  - {fileID: 7732679373757293604, guid: 70115c62c215879468742f6695171004, type: 3}
+  - {fileID: 4437539595638407869, guid: e08c0c14b871cf34081fe7f2e849d764, type: 3}
+  - {fileID: 4509715978674129678, guid: 8a1af171d765bc141b0d862c4e1ace96, type: 3}
+  - {fileID: 8869905502676392076, guid: 131acdce29f66324bb6ae507e4fb76ad, type: 3}
+  - {fileID: 2959599223686728037, guid: 9e108f4af0fdea04fbc2049663abd2df, type: 3}
+  - {fileID: 4918133325003012317, guid: 2f1650eb9afb103439e19e68bdab9e66, type: 3}
+  - {fileID: 433342295567239520, guid: 25f122b9009e416428ec6a2d0a9c1ac3, type: 3}
+  - {fileID: 8329247669089654374, guid: 4f4425ccda89c9e4887a6b8132272679, type: 3}
+  - {fileID: 2954428891849167314, guid: 6a0bb398009ace24c897e62ec58522eb, type: 3}
+  - {fileID: 2396012061835025172, guid: aa182bb5e4da2de4f9b151675cb02401, type: 3}
+  - {fileID: 7125145118339669187, guid: 04d7f34655e8e7e4f9bbd12c3d2aa3f9, type: 3}
+  - {fileID: 551577872727279194, guid: 5ee6117a40b1a1745985b69dcb667d58, type: 3}
+  - {fileID: 4854566366072715061, guid: bf87650ac1e4a5f46a93a497c5c189f6, type: 3}
+  - {fileID: 2539928945496443280, guid: 4f7d9031afdc16e48bd0fac6a5e8a3ba, type: 3}
+  - {fileID: 5948653462348688214, guid: 44cada1c2426831479ccfa771fe51030, type: 3}
+  - {fileID: 2169937220533863240, guid: bb93ca74895a57a469cdc48b4b8b3b0a, type: 3}
+  - {fileID: 7679165477110473643, guid: 3301ea5c6438bdd4cb409797418e14b0, type: 3}
+  - {fileID: 5231014171012760816, guid: f29b5b752cf710a4ba10ae672976e040, type: 3}
+  - {fileID: 3191052087700484718, guid: c51b2af4450b67e4dbf9e612e78032f8, type: 3}
+  - {fileID: 3708602581339391950, guid: 80a75353d4cfcc34982f7d867333f4c2, type: 3}
+  - {fileID: 4345316005793943861, guid: cb6294a17994d6742b8783d92fa130b9, type: 3}
+  - {fileID: 6067655471032476839, guid: 68a54e5c6f444f04588ecaa4ebe8a86a, type: 3}
+  - {fileID: 287908324716336030, guid: a4a6b800a3af57d469c604741763fe3b, type: 3}
+  - {fileID: 1294297694381455021, guid: f7c4010cb382d1140ad8f75835030cd9, type: 3}
+  - {fileID: 4630209529444749092, guid: c7ff50d280261f04ba4ddab7fe03c681, type: 3}
+  - {fileID: 3302704731918626418, guid: 581a4967e59e36b49924222df4673299, type: 3}
+  - {fileID: 5392298588355633572, guid: 33e52d2a363e91641ad5dddc6ddb0bd4, type: 3}
+  - {fileID: 8302989376920048580, guid: 65b1699084172054189662ddc20db9d8, type: 3}
+  - {fileID: 6278550353447819916, guid: d6e99fc8941d3d64da872eca50c900c9, type: 3}
+  - {fileID: 1140882883643322771, guid: ac99eee76434d524f8490ebd7ca6d428, type: 3}
+  - {fileID: 4714617185174580937, guid: 3f66027e7b811754eb90b244b815072a, type: 3}
+  - {fileID: 3736360707268388075, guid: dd6974cfab367164e8fd142d8deb54b4, type: 3}
+  - {fileID: 4087981088707881032, guid: 109643a1adf69ae4e995d51c6fd806fb, type: 3}
+  - {fileID: 1716377703020604249, guid: 9c53d6afa42fe544593e656ada81e472, type: 3}
+  - {fileID: 6834945731706627841, guid: 167fa6b86cd2ae14bb83f6b71f42bc44, type: 3}
+  - {fileID: 4105609293682000235, guid: 3d6a258c9f5884d4b9efc179d9de4683, type: 3}
+  - {fileID: 8405039159591198531, guid: bb5d8947a30ca4c44a82043bf79ec6d6, type: 3}
+  - {fileID: 7173169302493286537, guid: 3368d33248ff8114fb90964faa48f67f, type: 3}
+  - {fileID: 4314315731347276880, guid: f8441b901b7c56b4a82b5f94fb014c9b, type: 3}
+  - {fileID: 1032756113579143994, guid: 15cc174492ee5aa40bd33461a3572c82, type: 3}
+  - {fileID: 7911377511014921420, guid: 8b521447aa2fc6248820c0652c55fc67, type: 3}
+  - {fileID: 3357340011689640418, guid: 83cbc9b874b6b204fbb566742fba27b1, type: 3}
+  - {fileID: 4200957962049986878, guid: b5ea3afdaa09ceb47abda1b1e5c4494f, type: 3}
+  - {fileID: 1304270020843556816, guid: fb6cc0515b35e504c85d8368aeafab7f, type: 3}
+  arrayX:
+  - -6.812428
+  - 9.12
+  - 17.78
+  - 15.65
+  - -2.57
+  - -9.51
+  - -2.37
+  - 2.03
+  - 19.51
+  - 35.32
+  - 40.46
+  - 37.86
+  - 34.46
+  - 18.04
+  - 8.83
+  - 10.97
+  - 7.57
+  - -3.24
+  - -9.91
+  - -0.1
+  - 7.3
+  - 31.52
+  - 40.93
+  - 27.18
+  - 21.25
+  - -3.77
+  - -1.07
+  - 17.68
+  - 41.19
+  - 21.65
+  - 8.14
+  - 0.61
+  - 32.04
+  - 39.92
+  - 40.55
+  - 17.87
+  - 4.06
+  - -7.38
+  - 39.07
+  - 4.07
+  - 11.86
+  - 20.64
+  - 15.02
+  - -5.49
+  - 12.36
+  - 1.61
+  - 28.04
+  - -12.98
+  arrayY:
+  - 4.528909
+  - 2.17
+  - 2.5
+  - -13.22
+  - -13.49
+  - -28.37
+  - -44.85
+  - -58.2
+  - -57.07
+  - -37.52
+  - -55.74
+  - -34.52
+  - -26.18
+  - -13.23
+  - -6.36
+  - -29.51
+  - -50.33
+  - -41.79
+  - -25.58
+  - -2.62
+  - -32.72
+  - -52.28
+  - -41.67
+  - -29.39
+  - -12.24
+  - -14.78
+  - -29.95
+  - -29.87
+  - -26.14
+  - -1.28
+  - 5.15
+  - -50.6
+  - -58.91
+  - -58.04
+  - -32.71
+  - -7.17
+  - -31.03
+  - -1.24
+  - -31.71
+  - 2.11
+  - -59.03
+  - -55.58
+  - -2.43
+  - -47.98
+  - -28.56
+  - -0.85
+  - -24.41
+  - -36.15
