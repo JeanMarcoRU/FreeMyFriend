@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 public class RandomMov : MonoBehaviour
@@ -31,7 +32,11 @@ public class RandomMov : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            print("This is C#");
+            //print("This is C#");
+            GameObject manager =  GameObject.Find("GameManager");
+            //if(GetComponent<SpriteRenderer>().sprite == manager.searching[0]){
+                //print("Hola");
+            //}
         }
         timeToChangeDirection -= Time.deltaTime;
 

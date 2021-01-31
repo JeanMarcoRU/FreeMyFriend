@@ -10,7 +10,7 @@ public class Manager : MonoBehaviour
     public GameObject[] npcs = new GameObject[48];
     public float[] arrayX = new float[48];
     public float[] arrayY = new float[48];
-    private GameObject[] searching = new GameObject[3];
+    public GameObject[] searching = new GameObject[3];
     public Image amigo1;
     public Image amigo2;
     public Image amigo3;
