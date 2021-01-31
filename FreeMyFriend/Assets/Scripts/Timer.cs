@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 {
     public int initialTime;
     public GameObject lostGameUI;
+    public GameObject mainUI;
     // public GameObject loseSound;
 
     [Range(-10.0f, 10.0f)]
@@ -58,10 +59,11 @@ public class Timer : MonoBehaviour
                 }
                 
 
-                PlayerMovement.stopPlayer = true;
-                PlayerMovement.isLose = true;
+                //PlayerMovement.stopPlayer = true;
+                //PlayerMovement.isLose = true;
                 myText.text = "";
                 lostGameUI.SetActive(true);
+                mainUI.SetActive(false);
 
                 
             }
