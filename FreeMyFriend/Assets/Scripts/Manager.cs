@@ -8,19 +8,23 @@ public class Manager : MonoBehaviour
 {
 
     public GameObject[] npcs = new GameObject[48];
+    public GameObject winUI;
+    public GameObject mainUI;
     public float[] arrayX = new float[48];
     public float[] arrayY = new float[48];
     public GameObject[] searching = new GameObject[3];
     public Image amigo1;
     public Image amigo2;
     public Image amigo3;
+    public Sprite check;
 
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
         amigo1 = GameObject.Find("Amigo1").GetComponent<Image>();
         amigo2 = GameObject.Find("Amigo2").GetComponent<Image>();
         amigo3 = GameObject.Find("Amigo3").GetComponent<Image>();
+
         SearchList();
         Spawm();
 
@@ -29,7 +33,31 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (verifyWin())
+        {
+            print("AHHHHHHHHHHHHHHHHHHHHHHH");
+            GameObject[] timers = GameObject.FindGameObjectsWithTag("Finish");
+            GameObject timer = timers[0];
+            timer.GetComponent<Timer>().stopTimer = false;
+            winUI.SetActive(true);
+            mainUI.SetActive(false);
+      
+        }
+    }
+
+    public bool verifyWin()
+    {
+        bool win = true;
+        foreach (GameObject friend in searching)
+        {
+            if (!friend.GetComponent<NPC>().found)
+            {
+
+                win = false;
+            }
+            
+        }
+        return win;
     }
 
     public void SearchList()
@@ -45,6 +73,7 @@ public class Manager : MonoBehaviour
                 
             searching[j] = npcs[randNumber];
         }
+
 
         amigo1.sprite = searching[0].GetComponent<SpriteRenderer>().sprite;
         amigo2.sprite = searching[1].GetComponent<SpriteRenderer>().sprite;

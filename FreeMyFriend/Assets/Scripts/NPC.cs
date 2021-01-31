@@ -5,11 +5,14 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-public class RandomMov : MonoBehaviour
+
+public class NPC : MonoBehaviour
 {
     private float timeToChangeDirection;
     private float[] angles = new float[4];
     private float angle;
+    public bool found;
+    public string id;
 
     public Animator animator;
     public Rigidbody2D rb;
@@ -19,6 +22,7 @@ public class RandomMov : MonoBehaviour
     // Use this for initialization
     public void Start()
     {
+        this.found = false;
         angles[0] = 0f;
         angles[1] = 90f;
         angles[2] = 180f;
@@ -28,16 +32,45 @@ public class RandomMov : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    void OnMouseDown()
+    {
+        GameObject[] managers = GameObject.FindGameObjectsWithTag("GameController");
+        GameObject manager = managers[0];
+  
+
+        if (this.id == manager.GetComponent<Manager>().searching[0].GetComponent<NPC>().id)
+        {
+
+            manager.GetComponent<Manager>().amigo1.sprite = manager.GetComponent<Manager>().check;
+            manager.GetComponent<Manager>().amigo1.color = Color.white;
+            manager.GetComponent<Manager>().searching[0].GetComponent<NPC>().found = true;
+
+
+        }
+        else if (this.id == manager.GetComponent<Manager>().searching[1].GetComponent<NPC>().id)
+        {
+
+
+            manager.GetComponent<Manager>().amigo2.sprite = manager.GetComponent<Manager>().check;
+            manager.GetComponent<Manager>().amigo2.color = Color.white;
+            manager.GetComponent<Manager>().searching[1].GetComponent<NPC>().found = true;
+
+        }
+        else if (this.id == manager.GetComponent<Manager>().searching[2].GetComponent<NPC>().id)
+        {
+
+
+            manager.GetComponent<Manager>().amigo3.sprite = manager.GetComponent<Manager>().check;
+            manager.GetComponent<Manager>().amigo3.color = Color.white;
+            manager.GetComponent<Manager>().searching[2].GetComponent<NPC>().found = true;
+
+        }
+    }
+
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            //print("This is C#");
-            GameObject manager =  GameObject.Find("GameManager");
-            //if(GetComponent<SpriteRenderer>().sprite == manager.searching[0]){
-                //print("Hola");
-            //}
-        }
+        
         timeToChangeDirection -= Time.deltaTime;
 
         if (timeToChangeDirection <= 0)
@@ -74,6 +107,7 @@ public class RandomMov : MonoBehaviour
         animator.SetFloat("speed", 1f);
 
     }
+
 
     private void ChangeDirection()
     {

@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     public float timeInSecondsToShow = 0f;
     private float pauseTimeScale, initialTimeScale;
     public bool isPaused = false;
-    public static bool stopTimer = false;
+    public bool stopTimer = false;
     private bool bandera = true;
     private GameObject[] mainCamara;
     private AudioSource[] sounds;
