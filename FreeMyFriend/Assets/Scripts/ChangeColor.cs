@@ -39,7 +39,7 @@ public class ChangeColor : MonoBehaviour
 
     private void LightsOut()
     {
-        light.color = black;
+        light.intensity = 0.3f;
         timeToChangeColor = 2f;
         timeToBlack = 7f;
     }
@@ -49,6 +49,7 @@ public class ChangeColor : MonoBehaviour
         int randNumber = UnityEngine.Random.Range(0, 5);
         Color nextColor = colorList[randNumber];
         light.color = nextColor;
+        light.intensity = 1f;
         timeToChangeColor = 0.2f;
     }
 }
