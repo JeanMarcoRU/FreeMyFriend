@@ -14,7 +14,7 @@ public class ChangeColor : MonoBehaviour
     void Start()
     {
         timeToChangeColor = 0.2f;
-        timeToBlack = 5f;
+        timeToBlack = 7f;
     }
 
     // Update is called once per frame
@@ -39,17 +39,17 @@ public class ChangeColor : MonoBehaviour
 
     private void LightsOut()
     {
-        light.intensity = 0.3f;
-        timeToChangeColor = 2f;
+        light.intensity = 0.2f;
+        timeToChangeColor = 1.7f;
         timeToBlack = 7f;
     }
 
     private void ChangeColors()
     {
+        light.intensity = 1f;
         int randNumber = UnityEngine.Random.Range(0, 5);
         Color nextColor = colorList[randNumber];
         light.color = nextColor;
-        light.intensity = 1f;
-        timeToChangeColor = 0.2f;
+        timeToChangeColor = 0.5f;
     }
 }
