@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     public int initialTime;
     public GameObject lostGameUI;
-    public GameObject loseSound;
+    // public GameObject loseSound;
 
     [Range(-10.0f, 10.0f)]
     public float timeScale = 1;
@@ -41,14 +41,13 @@ public class Timer : MonoBehaviour
             if(timeInSecondsToShow > 0f)
             {
                 frameTimeScale = Time.deltaTime * timeScale;
-                timeInSecondsToShow += frameTimeScale;
+                timeInSecondsToShow -= frameTimeScale;
                 UpdateTimer(timeInSecondsToShow);
             }
             else
             {       
                 // colocar sonido de perdida
                 if(bandera){
-                    print("holi print");
                     mainCamara = GameObject.FindGameObjectsWithTag("MainCamera");
                     sounds =  mainCamara[0].GetComponents<AudioSource>();
 

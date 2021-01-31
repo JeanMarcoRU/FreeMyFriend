@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -10,10 +11,16 @@ public class Manager : MonoBehaviour
     public float[] arrayX = new float[48];
     public float[] arrayY = new float[48];
     private GameObject[] searching = new GameObject[3];
+    public Image amigo1;
+    public Image amigo2;
+    public Image amigo3;
 
     // Start is called before the first frame update
     void Start()
     {
+        amigo1 = GameObject.Find("Amigo1").GetComponent<Image>();
+        amigo2 = GameObject.Find("Amigo2").GetComponent<Image>();
+        amigo3 = GameObject.Find("Amigo3").GetComponent<Image>();
         SearchList();
         Spawm();
 
@@ -38,8 +45,14 @@ public class Manager : MonoBehaviour
                 
             searching[j] = npcs[randNumber];
         }
-        
 
+        amigo1.sprite = searching[0].GetComponent<SpriteRenderer>().sprite;
+        amigo2.sprite = searching[1].GetComponent<SpriteRenderer>().sprite;
+        amigo3.sprite = searching[2].GetComponent<SpriteRenderer>().sprite;
+
+        amigo1.color = searching[0].GetComponent<SpriteRenderer>().color;
+        amigo2.color = searching[1].GetComponent<SpriteRenderer>().color;
+        amigo3.color = searching[2].GetComponent<SpriteRenderer>().color;
     }
 
     public void Spawm()
@@ -52,7 +65,7 @@ public class Manager : MonoBehaviour
                 randNumber = Random.Range(0, 48);
                 
             }
-            Vector3 spawnPos = new Vector3(arrayX[randNumber], arrayY[randNumber],-1);
+            Vector3 spawnPos = new Vector3(arrayX[randNumber], arrayY[randNumber], -1);
             arrayX[randNumber] = 0f;
             arrayY[randNumber] = 0f;
             Instantiate(npcs[i], spawnPos, Quaternion.identity);
